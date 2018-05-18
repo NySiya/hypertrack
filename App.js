@@ -5,54 +5,37 @@
  */
 
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import { NativeModules } from 'react-native';
+import {RNHyperTrack as RNHyperTrackImport} from 'react-native-hypertrack';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+if (NativeModules.RNHyperTrack != undefined) {
+  var RNHyperTrack = NativeModules.RNHyperTrack;
+} else {
+  var RNHyperTrack = RNHyperTrackImport;
+}
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    RNHyperTrack.initialize('pk_test_f898ad1a09558cd87a86c0ee5bf5df68f0ee8287');
+  }
+
+  createUer() {
+    HyperTrack.getOrCreateUser(name: name, phone: phone, uniqueId: phone) { (user, error) in
+      if (error != nil) {
+        return error
+      }
+
+      if (user != nil) {
+        return 'success'
+      }
+    }
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Text>{ this.createUer }<Text>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
