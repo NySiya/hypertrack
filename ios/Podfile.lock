@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.7.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Swift (3.4.2):
+    - CocoaLumberjack/Default
+  - GzipSwift (4.0.4)
+  - HyperTrack (0.6.11):
+    - Alamofire (>= 4.4.0)
+    - CocoaLumberjack/Swift
+    - GzipSwift
+    - SQLite.swift (= 0.11.2)
+  - SQLite.swift (0.11.2):
+    - SQLite.swift/standard (= 0.11.2)
+  - SQLite.swift/standard (0.11.2)
+
+DEPENDENCIES:
+  - HyperTrack
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - CocoaLumberjack
+    - GzipSwift
+    - HyperTrack
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  GzipSwift: 1a5bc5f7827e09846b0635b5079f1224bc3b1c3a
+  HyperTrack: d418291cc627fca100f67ec68179a4cb15cbfb4a
+  SQLite.swift: 670c3e9e0a806bbfd56a3de5d530768dc0e6fe7c
+
+PODFILE CHECKSUM: ca96861a802e677622b77344cfabe66fc09fa0c1
+
+COCOAPODS: 1.5.0

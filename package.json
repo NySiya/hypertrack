@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-native-hypertrack": "^3.1.10"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
@@ -18,5 +19,9 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:NySiya/hypertrack.git",
+  "author": "Siya Ny <siya.nyinfo@gmail.com>",
+  "license": "MIT"
 }
